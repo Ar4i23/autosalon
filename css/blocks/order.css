@@ -1,0 +1,268 @@
+/* ── БЛОК: order (форма заявки + экран успеха) ── */
+.order__grid {
+  display: grid;
+  gap: 48px;
+}
+.order__text {
+  margin-top: 18px;
+  color: var(--muted);
+  max-width: 44ch;
+}
+
+.order__manager {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+}
+.order__manager-photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.order__manager-name {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.order__manager-role {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.order__contacts {
+  margin-top: 26px;
+  display: grid;
+  gap: 10px;
+}
+.order__contact {
+  font-size: 0.92rem;
+}
+.order__contact-key {
+  display: inline-block;
+  min-width: 84px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.order__contact a {
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.25s,
+    border-color 0.25s;
+}
+.order__contact a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Форма */
+.form {
+  position: relative;
+  padding: 30px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+}
+.form--shake {
+  animation: shake 0.5s ease;
+}
+
+.form__grid {
+  display: grid;
+  gap: 18px 20px;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.field__req {
+  color: var(--accent);
+}
+
+.field__input {
+  width: 100%;
+  padding: 13px 15px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  outline: none;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    background-color 0.25s;
+}
+.field__input::placeholder {
+  color: color-mix(in srgb, var(--muted) 70%, transparent);
+}
+.field__input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.field__input--select {
+  appearance: none;
+  cursor: pointer;
+}
+.field__input--area {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.field--error .field__input {
+  border-color: var(--err);
+}
+.field--error .field__input:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--err) 22%, transparent);
+}
+.field--valid .field__input {
+  border-color: var(--ok);
+}
+
+.field__error {
+  display: block;
+  min-height: 1.1rem;
+  margin-top: 5px;
+  font-size: 0.74rem;
+  color: var(--err);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+.field--error .field__error {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Чекбокс согласия */
+.form__footer {
+  display: grid;
+  gap: 6px;
+}
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.checkbox__box {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--bg-soft);
+  display: grid;
+  place-items: center;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
+}
+.checkbox__box::after {
+  content: "✓";
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--on-accent);
+  opacity: 0;
+  transform: scale(0.4);
+  transition:
+    opacity 0.2s,
+    transform 0.25s var(--ease);
+}
+.checkbox__input:checked + .checkbox__box {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.checkbox__input:checked + .checkbox__box::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.checkbox__input:focus-visible + .checkbox__box {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.checkbox__label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.checkbox__error {
+  margin-left: 32px;
+}
+.form__footer--error .checkbox__box {
+  border-color: var(--err);
+}
+.form__footer--error .checkbox__error {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form__submit {
+  display: grid;
+  gap: 10px;
+}
+.form__hint {
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+.form__hint--ready {
+  color: var(--ok);
+}
+
+/* Экран успеха — скрыт атрибутом hidden, см. фикс [hidden] в base.css */
+.form-success {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 30px 10px;
+  text-align: center;
+}
+.form-success__icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: var(--on-accent);
+  background: var(--ok);
+  border-radius: 50%;
+  animation: pop 0.5s var(--ease) both;
+}
+.form-success__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.form-success__text {
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 34ch;
+}
+.form-success .btn {
+  margin-top: 10px;
+}

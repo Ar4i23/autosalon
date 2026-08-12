@@ -1,0 +1,39 @@
+/* ── БЛОК: переменные и темы ── */
+:root {
+  --font-display: "Russo One", system-ui, sans-serif;
+  --font-body: "Golos Text", system-ui, sans-serif;
+
+  --bg: #0b0d11;
+  --bg-soft: #10141b;
+  --surface: #161b24;
+  --line: #242b38;
+  --text: #edf0f6;
+  --muted: #96a0b2;
+
+  --accent: #ff5c1f;
+  --accent-2: #6ea8ff;
+  --on-accent: #160800;
+
+  --ok: #3ecf8e;
+  --err: #ff5470;
+
+  --header-h: 68px;
+  --radius: 4px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --grain-opacity: 0.05;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="light"] {
+  --bg: #f3f1ea;
+  --bg-soft: #eae7dd;
+  --surface: #ffffff;
+  --line: #d8d3c4;
+  --text: #14171e;
+  --muted: #5c6373;
+  --accent-2: #2e66c9;
+  --ok: #1f9d63;
+  --err: #d63a5c;
+  --shadow: 0 16px 34px rgba(30, 28, 20, 0.14);
+  --grain-opacity: 0.035;
+}

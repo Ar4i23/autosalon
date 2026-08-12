@@ -1,0 +1,13 @@
+/* STYLE.CSS — точка сборки. Блоки подключаются строго в порядке:
+   переменные → база → блоки страницы → эффекты */
+@import "blocks/vars.css";
+@import "blocks/base.css";
+@import "blocks/header.css";
+@import "blocks/hero.css";
+@import "blocks/marquee.css";
+@import "blocks/catalog.css";
+@import "blocks/about.css";
+@import "blocks/tradein.css";
+@import "blocks/order.css";
+@import "blocks/footer.css";
+@import "blocks/fx.css";

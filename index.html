@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Автосалон «Кобальт» — продажа автомобилей, трейд-ин, кредит, сервис."
+    />
+    <title>КОБАЛЬТ — автосалон | Автомобили в наличии</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Golos+Text:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body id="top">
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header class="header">
+      <div class="header__inner container">
+        <a class="logo header__logo" href="#top">
+          <span class="logo__mark"></span>
+          <span class="logo__text">КОБАЛЬТ</span>
+        </a>
+
+        <nav class="nav header__nav" id="nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="#catalog">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">Преимущества</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#tradein">Трейд-ин</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#order">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__tools">
+          <a class="header__phone" href="tel:+74950004545"
+            >+7 (495) 000-45-45</a
+          >
+
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Переключить на светлую тему"
+          >
+            <span class="theme-toggle__knob">
+              <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+              <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+            </span>
+          </button>
+
+          <button
+            class="header__burger"
+            id="burger"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="hero__grid container">
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-reveal>
+            Автосалон «Кобальт» · Москва, Ясеневая, 21
+          </p>
+
+          <h1
+            class="hero__title"
+            id="scrambleTitle"
+            data-reveal
+            data-reveal-delay="100"
+          >
+            ВЫБЕРИ СВОЮ СКОРОСТЬ
+          </h1>
+
+          <p class="hero__lead" data-reveal data-reveal-delay="180">
+            340+ автомобилей в наличии, выдача в день обращения, собственный
+            сервис и гарантия до 3 лет на каждый автомобиль.
+          </p>
+
+          <ul class="specs hero__specs" data-reveal data-reveal-delay="260">
+            <li class="specs__item">
+              <span class="specs__value specs__value--accent">3,9&nbsp;с</span>
+              <span class="specs__label">до 100 км/ч</span>
+            </li>
+            <li class="specs__item">
+              <span class="specs__value">520</span>
+              <span class="specs__label">лошадиных сил</span>
+            </li>
+            <li class="specs__item">
+              <span class="specs__value">650</span>
+              <span class="specs__label">Н·м момента</span>
+            </li>
+            <li class="specs__item">
+              <span class="specs__value">3,45&nbsp;млн&nbsp;₽</span>
+              <span class="specs__label">цена от</span>
+            </li>
+          </ul>
+
+          <div class="hero__actions" data-reveal data-reveal-delay="340">
+            <a class="btn btn--primary" href="#catalog">Смотреть каталог</a>
+            <a class="btn btn--ghost" href="#order">Оставить заявку</a>
+          </div>
+        </div>
+
+        <div
+          class="hero__media"
+          data-reveal
+          data-reveal-type="right"
+          data-reveal-delay="200"
+        >
+          <div class="hero__frame">
+            <img
+              class="hero__img"
+              src="https://picsum.photos/seed/cobalt-showroom-gt/960/720"
+              alt="Витринный автомобиль Вектор GT в шоуруме"
+            />
+            <div class="hero__tag">
+              <span class="hero__tag-dot"></span>
+              В наличии · 12 авто серии GT
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#catalog">листайте вниз ↓</a>
+    </section>
+
+    <!-- ═══════════ MARQUEE ═══════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Гарантия 3 года</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Кредит от 4,9%</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Трейд-ин за 1 день</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Выдача в день покупки</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Сервис 24/7</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">0% переплаты на первый взнос</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Гарантия 3 года</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Кредит от 4,9%</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Трейд-ин за 1 день</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Выдача в день покупки</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">Сервис 24/7</span
+        ><span class="marquee__dot"></span>
+        <span class="marquee__item">0% переплаты на первый взнос</span
+        ><span class="marquee__dot"></span>
+      </div>
+    </div>
+
+    <!-- ═══════════ CATALOG ═══════════ -->
+    <section class="catalog section" id="catalog">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-head__eyebrow">Каталог</span>
+          <h2 class="section-head__title">Автомобили в наличии</h2>
+        </div>
+
+        <div
+          class="filters catalog__filters"
+          data-reveal
+          data-reveal-delay="120"
+        >
+          <button
+            class="filters__btn filters__btn--active"
+            type="button"
+            data-filter="all"
+          >
+            Все
+          </button>
+          <button class="filters__btn" type="button" data-filter="sedan">
+            Седаны
+          </button>
+          <button class="filters__btn" type="button" data-filter="crossover">
+            Кроссоверы
+          </button>
+          <button class="filters__btn" type="button" data-filter="electric">
+            Электро
+          </button>
+          <button class="filters__btn" type="button" data-filter="sport">
+            Спорт
+          </button>
+        </div>
+
+        <div class="catalog__grid">
+          <article class="card" data-type="sport" data-reveal>
+            <div class="card__media">
+              <span class="card__badge">Спорт</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-vektor-gt/640/420"
+                alt="Вектор GT"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Вектор GT</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">3,9 с</li>
+                <li class="card__meta-item">520 л.с.</li>
+                <li class="card__meta-item">АКПП</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">3 450 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="sedan"
+            data-reveal
+            data-reveal-delay="60"
+          >
+            <div class="card__media">
+              <span class="card__badge">Седан</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-astra-s5/640/420"
+                alt="Астра S5"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Астра S5</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">7,4 с</li>
+                <li class="card__meta-item">249 л.с.</li>
+                <li class="card__meta-item">Робот</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">2 890 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="crossover"
+            data-reveal
+            data-reveal-delay="120"
+          >
+            <div class="card__media">
+              <span class="card__badge">Кроссовер</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-terra-x/640/420"
+                alt="Терра X"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Терра X</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">8,1 с</li>
+                <li class="card__meta-item">218 л.с.</li>
+                <li class="card__meta-item">AWD</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">3 120 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="electric"
+            data-reveal
+            data-reveal-delay="180"
+          >
+            <div class="card__media">
+              <span class="card__badge">Электро</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-impuls-e9/640/420"
+                alt="Импульс E9"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Импульс E9</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">4,6 с</li>
+                <li class="card__meta-item">435 л.с.</li>
+                <li class="card__meta-item">620 км</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">4 050 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-type="crossover" data-reveal>
+            <div class="card__media">
+              <span class="card__badge">Кроссовер</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-nord-4x4/640/420"
+                alt="Норд 4×4"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Норд 4×4</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">9,2 с</li>
+                <li class="card__meta-item">190 л.с.</li>
+                <li class="card__meta-item">Полный привод</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">2 640 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="sedan"
+            data-reveal
+            data-reveal-delay="60"
+          >
+            <div class="card__media">
+              <span class="card__badge">Седан</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-riviera-limited/640/420"
+                alt="Ривьера Лимитед"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Ривьера Лимитед</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">6,1 с</li>
+                <li class="card__meta-item">340 л.с.</li>
+                <li class="card__meta-item">Лимит. серия</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">5 200 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="sport"
+            data-reveal
+            data-reveal-delay="120"
+          >
+            <div class="card__media">
+              <span class="card__badge">Спорт</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-spektr-r/640/420"
+                alt="Спектр R"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Спектр R</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">3,2 с</li>
+                <li class="card__meta-item">640 л.с.</li>
+                <li class="card__meta-item">Карбон-пакет</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">6 100 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-type="crossover"
+            data-reveal
+            data-reveal-delay="180"
+          >
+            <div class="card__media">
+              <span class="card__badge">Кроссовер</span>
+              <img
+                class="card__img"
+                src="https://picsum.photos/seed/car-grand-tour/640/420"
+                alt="Гранд Тур"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Гранд Тур</h3>
+              <ul class="card__meta">
+                <li class="card__meta-item">7,8 с</li>
+                <li class="card__meta-item">245 л.с.</li>
+                <li class="card__meta-item">7 мест</li>
+              </ul>
+              <div class="card__footer">
+                <span class="card__price">3 780 000 ₽</span>
+                <a class="btn btn--small btn--ghost" href="#order">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT / ПРЕИМУЩЕСТВА ═══════════ -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <aside class="about__aside" data-reveal>
+          <span class="section-head__eyebrow">Почему «Кобальт»</span>
+          <h2 class="section-head__title">
+            Салон, где всё&nbsp;про автомобиль — и&nbsp;ничего лишнего
+          </h2>
+          <p class="about__text">
+            Мы 12 лет продаём автомобили так, как хотели бы покупать их сами:
+            честная цена в договоре, реальный пробег, история каждой машины в
+            открытом доступе.
+          </p>
+
+          <ul class="stats about__stats">
+            <li class="stats__item">
+              <span class="stats__value" data-count-to="12">0</span>
+              <span class="stats__label">лет на рынке</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__value" data-count-to="340">0</span>
+              <span class="stats__label">авто в наличии</span>
+            </li>
+            <li class="stats__item">
+              <span
+                class="stats__value"
+                data-count-to="8500"
+                data-count-suffix="+"
+                >0</span
+              >
+              <span class="stats__label">одобренных кредитов</span>
+            </li>
+            <li class="stats__item">
+              <span
+                class="stats__value"
+                data-count-to="4.9"
+                data-count-decimals="1"
+                >0</span
+              >
+              <span class="stats__label">рейтинг клиентов</span>
+            </li>
+          </ul>
+        </aside>
+
+        <ol class="about__list">
+          <li class="about__item" data-reveal>
+            <span class="about__num">01</span>
+            <div class="about__desc">
+              <h3 class="about__name">Гарантия 3 года или 150 000 км</h3>
+              <p>
+                На двигатель, коробку и электронику. Ремонтируем у нас — без
+                очередей и мелких шрифтов.
+              </p>
+            </div>
+          </li>
+          <li class="about__item" data-reveal data-reveal-delay="80">
+            <span class="about__num">02</span>
+            <div class="about__desc">
+              <h3 class="about__name">Кредит от 4,9% за 30 минут</h3>
+              <p>
+                14 банков-партнёров, одобрение прямо в салоне, первый взнос от
+                0%.
+              </p>
+            </div>
+          </li>
+          <li class="about__item" data-reveal data-reveal-delay="160">
+            <span class="about__num">03</span>
+            <div class="about__desc">
+              <h3 class="about__name">Трейд-ин за один день</h3>
+              <p>
+                Оценим ваш автомобиль за 30 минут, зачтём стоимость в цену
+                нового.
+              </p>
+            </div>
+          </li>
+          <li class="about__item" data-reveal data-reveal-delay="240">
+            <span class="about__num">04</span>
+            <div class="about__desc">
+              <h3 class="about__name">Собственный сервис 24/7</h3>
+              <p>
+                12 постов, подменный автомобиль на время ремонта и эвакуатор по
+                городу — бесплатно.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ TRADE-IN ═══════════ -->
+    <section class="tradein section" id="tradein">
+      <div class="tradein__bg" aria-hidden="true"></div>
+      <div class="container tradein__inner">
+        <div class="tradein__content" data-reveal>
+          <span class="section-head__eyebrow">Трейд-ин</span>
+          <h2 class="section-head__title">
+            Старый автомобиль — в&nbsp;зачёт нового
+          </h2>
+          <p class="tradein__text">
+            Приезжайте на своей машине сегодня — уезжайте на новой уже завтра.
+            Оценка за 30 минут, доплата от 0 ₽, документы оформляем мы.
+          </p>
+          <a class="btn btn--primary" href="#order" data-preset="Трейд-ин"
+            >Оценить мой автомобиль</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ORDER / ФОРМА ═══════════ -->
+    <section class="order section" id="order">
+      <div class="container order__grid">
+        <aside class="order__aside" data-reveal>
+          <span class="section-head__eyebrow">Заявка</span>
+          <h2 class="section-head__title">
+            Оставьте заявку — перезвоним за&nbsp;15&nbsp;минут
+          </h2>
+          <p class="order__text">
+            Персональный менеджер подберёт комплектацию, рассчитает кредит и
+            запишет на тест-драйв в удобное время.
+          </p>
+
+          <div class="order__manager">
+            <img
+              class="order__manager-photo"
+              src="https://picsum.photos/seed/car-manager-portrait/120/120"
+              alt="Менеджер салона"
+            />
+            <div class="order__manager-info">
+              <span class="order__manager-name">Дмитрий Соколов</span>
+              <span class="order__manager-role"
+                >руководитель отдела продаж</span
+              >
+            </div>
+          </div>
+
+          <ul class="order__contacts">
+            <li class="order__contact">
+              <span class="order__contact-key">Адрес</span> Москва, Ясеневая, 21
+            </li>
+            <li class="order__contact">
+              <span class="order__contact-key">Телефон</span>
+              <a href="tel:+74950004545">+7 (495) 000-45-45</a>
+            </li>
+            <li class="order__contact">
+              <span class="order__contact-key">Почта</span>
+              <a href="mailto:hello@kobalt.auto">hello@kobalt.auto</a>
+            </li>
+            <li class="order__contact">
+              <span class="order__contact-key">Режим</span> Ежедневно
+              09:00–21:00
+            </li>
+          </ul>
+        </aside>
+
+        <form
+          class="form order__form"
+          id="orderForm"
+          novalidate
+          data-reveal
+          data-reveal-type="right"
+        >
+          <div class="form__grid">
+            <div class="form__group field" data-field="name">
+              <label class="field__label" for="fName"
+                >Имя <span class="field__req">*</span></label
+              >
+              <input
+                class="field__input"
+                id="fName"
+                name="name"
+                type="text"
+                placeholder="Как к вам обращаться"
+                autocomplete="name"
+              />
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group field" data-field="phone">
+              <label class="field__label" for="fPhone"
+                >Телефон <span class="field__req">*</span></label
+              >
+              <input
+                class="field__input"
+                id="fPhone"
+                name="phone"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+                autocomplete="tel"
+                inputmode="tel"
+              />
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group field" data-field="email">
+              <label class="field__label" for="fEmail">Email</label>
+              <input
+                class="field__input"
+                id="fEmail"
+                name="email"
+                type="email"
+                placeholder="you@mail.ru"
+                autocomplete="email"
+              />
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group field" data-field="model">
+              <label class="field__label" for="fModel"
+                >Интересует <span class="field__req">*</span></label
+              >
+              <select
+                class="field__input field__input--select"
+                id="fModel"
+                name="model"
+              >
+                <option value="" disabled selected>Выберите услугу</option>
+                <option value="Покупка авто">Покупка авто</option>
+                <option value="Трейд-ин">Трейд-ин</option>
+                <option value="Кредит и рассрочка">Кредит и рассрочка</option>
+                <option value="Тест-драйв">Тест-драйв</option>
+              </select>
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div
+              class="form__group form__group--full field"
+              data-field="comment"
+            >
+              <label class="field__label" for="fComment">Комментарий</label>
+              <textarea
+                class="field__input field__input--area"
+                id="fComment"
+                name="comment"
+                rows="4"
+                placeholder="Модель, комплектация, удобное время звонка…"
+              ></textarea>
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div class="form__footer form__group--full">
+              <label class="checkbox">
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  id="fConsent"
+                  name="consent"
+                />
+                <span class="checkbox__box" aria-hidden="true"></span>
+                <span class="checkbox__label"
+                  >Согласен на обработку персональных данных
+                  <span class="field__req">*</span></span
+                >
+              </label>
+              <span
+                class="field__error checkbox__error"
+                id="consentError"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="form__submit form__group--full">
+              <button
+                class="btn btn--primary btn--block"
+                id="formSubmit"
+                type="submit"
+                disabled
+              >
+                Отправить заявку
+              </button>
+              <p class="form__hint" id="formHint">
+                Заполните обязательные поля
+              </p>
+            </div>
+          </div>
+
+          <div class="form-success" id="formSuccess" hidden>
+            <div class="form-success__icon" aria-hidden="true">✓</div>
+            <h3 class="form-success__title">Заявка принята!</h3>
+            <p class="form-success__text">
+              Менеджер перезвонит вам в течение 15 минут в рабочее время салона.
+            </p>
+            <button class="btn btn--ghost" type="button" id="formReset">
+              Отправить ещё одну
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col footer__col--brand">
+            <a class="logo footer__logo" href="#top">
+              <span class="logo__mark"></span>
+              <span class="logo__text">КОБАЛЬТ</span>
+            </a>
+            <p class="footer__blurb">
+              Автосалон полного цикла: продажа, кредит, трейд-ин, сервис и
+              гарантия — под одной крышей с 2013 года.
+            </p>
+          </div>
+
+          <nav class="footer__col" aria-label="Навигация по сайту">
+            <h3 class="footer__heading">Навигация</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#catalog">Каталог</a></li>
+              <li><a class="footer__link" href="#about">Преимущества</a></li>
+              <li><a class="footer__link" href="#tradein">Трейд-ин</a></li>
+              <li><a class="footer__link" href="#order">Оставить заявку</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Услуги</h3>
+            <ul class="footer__list">
+              <li><span class="footer__plain">Покупка в кредит</span></li>
+              <li><span class="footer__plain">Страхование КАСКО</span></li>
+              <li><span class="footer__plain">Лизинг для юрлиц</span></li>
+              <li><span class="footer__plain">Сервис и запчасти</span></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Контакты</h3>
+            <ul class="footer__list">
+              <li>
+                <a class="footer__link" href="tel:+74950004545"
+                  >+7 (495) 000-45-45</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="mailto:hello@kobalt.auto"
+                  >hello@kobalt.auto</a
+                >
+              </li>
+              <li><span class="footer__plain">Москва, Ясеневая, 21</span></li>
+              <li><span class="footer__plain">Ежедневно 09:00–21:00</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span class="footer__copy"
+            >© 2025 Автосалон «Кобальт». Все права защищены.</span
+          >
+          <a class="footer__link" href="#top">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

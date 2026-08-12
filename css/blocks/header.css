@@ -1,0 +1,196 @@
+/* ── БЛОК: header + logo + nav + theme-toggle + burger ── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.35s,
+    border-color 0.35s,
+    backdrop-filter 0.35s;
+}
+.header--scrolled {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(12px);
+  border-color: var(--line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: var(--header-h);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 110;
+}
+.logo__mark {
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+  transition: transform 0.4s var(--ease);
+}
+.logo:hover .logo__mark {
+  transform: rotate(180deg);
+}
+.logo__text {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+}
+
+/* nav — мобильная панель; десктоп-вид в media.css */
+.nav {
+  position: fixed;
+  inset: var(--header-h) 0 auto 0;
+  z-index: 90;
+  padding: 26px 20px 34px;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  /* FIX: уводим панель полностью за экран вместе с отступом от шапки */
+  transform: translateY(calc(-100% - var(--header-h) - 4px));
+  visibility: hidden;
+  transition:
+    transform 0.45s var(--ease),
+    visibility 0s linear 0.45s;
+}
+.nav--open {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.45s var(--ease);
+}
+.nav__list {
+  display: grid;
+  gap: 6px;
+}
+.nav__link {
+  display: block;
+  padding: 10px 6px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    padding-left 0.25s;
+}
+.nav__link:hover,
+.nav__link--active {
+  color: var(--text);
+  border-color: var(--accent);
+  padding-left: 12px;
+}
+
+.header__tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header__phone {
+  display: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: color 0.25s;
+}
+.header__phone:hover {
+  color: var(--accent);
+}
+
+/* Переключатель темы */
+.theme-toggle {
+  position: relative;
+  width: 58px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  transition: border-color 0.25s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.theme-toggle__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  transition: transform 0.35s var(--ease);
+}
+[data-theme="light"] .theme-toggle__knob {
+  transform: translateX(30px);
+}
+
+.theme-toggle__icon {
+  position: absolute;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--on-accent);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+.theme-toggle__icon--sun {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+[data-theme="light"] .theme-toggle__icon--moon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+[data-theme="light"] .theme-toggle__icon--sun {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+/* Бургер */
+.header__burger {
+  position: relative;
+  width: 34px;
+  height: 26px;
+  z-index: 110;
+}
+.header__burger-line {
+  position: absolute;
+  left: 4px;
+  width: 26px;
+  height: 2px;
+  background: var(--text);
+  transition:
+    transform 0.3s var(--ease),
+    opacity 0.2s;
+}
+.header__burger-line:nth-child(1) {
+  top: 4px;
+}
+.header__burger-line:nth-child(2) {
+  top: 12px;
+}
+.header__burger-line:nth-child(3) {
+  top: 20px;
+}
+
+.header__burger--open .header__burger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.header__burger--open .header__burger-line:nth-child(2) {
+  opacity: 0;
+}
+.header__burger--open .header__burger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

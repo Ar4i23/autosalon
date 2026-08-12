@@ -1,0 +1,31 @@
+/* ── БЛОК: tradein ── */
+.tradein {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+}
+.tradein__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--bg) 94%, transparent) 28%,
+      color-mix(in srgb, var(--bg) 40%, transparent)
+    ),
+    url("https://picsum.photos/seed/trade-in-lane/1600/700") center / cover
+      no-repeat;
+}
+.tradein__inner {
+  position: relative;
+}
+.tradein__content {
+  max-width: 560px;
+}
+.tradein__text {
+  margin-top: 18px;
+  color: var(--muted);
+}
+.tradein__content .btn {
+  margin-top: 30px;
+}

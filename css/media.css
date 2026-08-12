@@ -1,0 +1,189 @@
+/* ════════════════════════════════════════════════════════════
+   MEDIA.CSS — все адаптивные правки (mobile-first)
+   Брейкпоинты: 480 → 768 → 1024 → 1280 + особые случаи
+   ════════════════════════════════════════════════════════════ */
+
+/* ── ≥ 480px · крупные телефоны ────────────────────────────── */
+@media (min-width: 480px) {
+  .hero__actions {
+    flex-wrap: nowrap;
+  }
+  .form {
+    padding: 34px 30px;
+  }
+}
+
+/* ── ≥ 768px · планшеты ────────────────────────────────────── */
+@media (min-width: 768px) {
+  .section {
+    padding-block: 100px;
+  }
+
+  .hero {
+    padding-top: calc(var(--header-h) + 64px);
+    padding-bottom: 110px;
+  }
+  .hero__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 40px;
+  }
+  .specs {
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    gap: 34px;
+  }
+
+  .catalog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+  }
+  .about__aside {
+    position: sticky;
+    top: calc(var(--header-h) + 32px);
+    align-self: start;
+  }
+  .about__item {
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    padding-block: 30px;
+  }
+
+  .order__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .form__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form__group--full {
+    grid-column: 1 / -1;
+  }
+  .form__footer {
+    align-items: center;
+    grid-template-columns: 1fr auto;
+  }
+  .checkbox__error {
+    grid-column: 1 / -1;
+    margin-left: 0;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ── ≥ 1024px · ноутбуки и десктоп ─────────────────────────── */
+@media (min-width: 1024px) {
+  /* шапка: обычное горизонтальное меню */
+  .nav {
+    position: static;
+    inset: auto;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    transform: none;
+    visibility: visible; /* ← добавить */
+  }
+  .nav__list {
+    display: flex;
+    gap: 34px;
+  }
+  .nav__link {
+    padding: 6px 0;
+    font-size: 0.85rem;
+  }
+  .nav__link:hover,
+  .nav__link--active {
+    padding-left: 0;
+  }
+
+  .header__phone {
+    display: block;
+  }
+  .header__burger {
+    display: none;
+  }
+
+  .catalog__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tradein__content {
+    max-width: 620px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+/* ── ≥ 1280px · широкие экраны ─────────────────────────────── */
+@media (min-width: 1280px) {
+  .hero__grid {
+    gap: 64px;
+  }
+  .catalog__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .stats {
+    grid-template-columns: repeat(4, auto);
+    gap: 40px;
+  }
+}
+
+/* ── ≤ 380px · маленькие телефоны ──────────────────────────── */
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+  .specs {
+    gap: 14px;
+  }
+  .hero__tag {
+    font-size: 0.68rem;
+    left: 10px;
+    bottom: 10px;
+  }
+  .logo__text {
+    font-size: 1rem;
+  }
+}
+
+/* ── короткие ландшафты (телефон на боку) ──────────────────── */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero {
+    padding-top: calc(var(--header-h) + 20px);
+    padding-bottom: 50px;
+  }
+  .hero__scroll {
+    display: none;
+  }
+  .nav {
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+  }
+}
+
+/* ── устройства без hover (тач) ────────────────────────────── */
+@media (hover: none) {
+  .btn:hover,
+  .card:hover,
+  .filters__btn:hover,
+  .about__item:hover {
+    transform: none;
+    padding-left: initial;
+  }
+  .card:hover .card__img {
+    transform: none;
+  }
+}
