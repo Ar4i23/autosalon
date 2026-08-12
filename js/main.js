@@ -7,8 +7,10 @@ import { initCounters } from "./modules/counter.js";
 import { initFilters } from "./modules/filter.js";
 import { initPreset } from "./modules/preset.js";
 import { initForm } from "./modules/form.js";
+import { initFavicon } from "./modules/favicon.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initFavicon();
   initTheme();
   initMenu();
   initScramble();
