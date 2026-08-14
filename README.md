@@ -2,7 +2,9 @@
 
 > Современный адаптивный сайт автосалона с каталогом автомобилей, фильтрацией, трейд-ин и интерактивной формой заявки.
 
-![AutoSalon Preview](docs/preview.png)
+![AutoSalon Preview Dark](docs/preview-dark.png)
+![AutoSalon Preview Light](docs/preview-light.png)
+
 
 ## 🌐 Live Demo
 
