@@ -2,8 +2,10 @@
 
 > Современный адаптивный сайт автосалона с каталогом автомобилей, фильтрацией, трейд-ин и интерактивной формой заявки.
 
-![AutoSalon Preview Dark](docs/preview-dark.png)
-![AutoSalon Preview Light](docs/preview-light.png)
+<p align="center">
+  <img src="docs/preview-light.png" width="49%" alt="AutoSalon — светлая тема">
+  <img src="docs/preview-dark.png" width="49%" alt="AutoSalon — тёмная тема">
+</p>
 
 
 ## 🌐 Live Demo
